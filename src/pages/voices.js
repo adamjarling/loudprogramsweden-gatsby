@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import HeroImageBg from "../components/HeroImageBg";
 import Fade from "react-reveal/Fade";
 import { graphql } from "gatsby";

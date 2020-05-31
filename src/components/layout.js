@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/styles.scss";
 import Helmet from "./helmet";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Footer from "./footer";
 
 const Layout = ({ children }) => (
   <div>
