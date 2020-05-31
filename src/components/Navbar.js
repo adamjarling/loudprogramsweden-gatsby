@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import loudLogo from "../img/LOUDSwe2.png";
+import loudLogo from "../images/LOUDSwe2.png";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
 
