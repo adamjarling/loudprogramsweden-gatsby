@@ -156,7 +156,7 @@ export const pageQuery = graphql`
   query IndexPageQuery {
     introPdf: file(
       sourceInstanceName: { eq: "pdf" }
-      relativePath: { eq: "Introduktion_Programdirektör_LOUD_Program-2.pdf" }
+      relativePath: { eq: "loud-introduction.pdf" }
     ) {
       id
       publicURL
