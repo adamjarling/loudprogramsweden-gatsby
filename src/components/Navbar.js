@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 import loudLogo from "../images/LOUDSwe2.png";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
+import { useStaticQuery, graphql } from "gatsby";
 
 const styles = {
   nav: {
@@ -10,100 +11,94 @@ const styles = {
   },
 };
 
-const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false,
-      navBarActiveClass: "",
-    };
+const NavIcon = ({ url, iconComponent }) => (
+  <a
+    className="navbar-item"
+    href={url}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {iconComponent}
+  </a>
+);
+
+const Navbar = () => {
+  const [active, setActive] = useState();
+  const [navBarActiveClass, setNavBarActiveClass] = useState("");
+
+  const data = useStaticQuery(graphql`
+    query NavbarQuery {
+      site {
+        siteMetadata {
+          instagram
+          facebook
+          youtube
+        }
+      }
+    }
+  `);
+
+  function toggleHamburger() {
+    // toggle the active boolean in the state
+    setActive(!active);
+    setNavBarActiveClass(active ? "" : "is-active");
   }
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: "is-active",
-            })
-          : this.setState({
-              navBarActiveClass: "",
-            });
-      }
-    );
-  };
-
-  render() {
-    return (
-      <nav
-        className="navbar is-white"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={loudLogo} alt="Loud Program Sweden" />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
+  return (
+    <nav
+      className="navbar is-white"
+      role="navigation"
+      aria-label="main-navigation"
+    >
+      <div className="container">
+        <div className="navbar-brand">
+          <Link to="/" className="navbar-item" title="Logo">
+            <img src={loudLogo} alt="Loud Program Sweden" />
+          </Link>
+          {/* Hamburger menu */}
           <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
+            className={`navbar-burger burger ${navBarActiveClass}`}
+            data-target="navMenu"
+            onClick={() => toggleHamburger()}
           >
-            <div
-              className="navbar-start has-text-centered is-family-secondary is-uppercase"
-              style={styles.nav}
-            >
-              <Link className="navbar-item" to="/about">
-                OM OSS
-              </Link>
-              <Link className="navbar-item" to="/voices">
-                RÖSTER OM LOUD
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                KONTAKT
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://www.instagram.com/loudprogramsweden/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {/* <FontAwesomeIcon icon={["fab", "instagram"]} size="lg" /> */}
-                <FaInstagram />
-              </a>
-              <a
-                className="navbar-item"
-                href="https://www.facebook.com/loudprogramsweden/?modal=admin_todo_tour"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaFacebook />
-              </a>
-            </div>
+            <span />
+            <span />
+            <span />
           </div>
         </div>
-      </nav>
-    );
-  }
+        <div id="navMenu" className={`navbar-menu ${navBarActiveClass}`}>
+          <div
+            className="navbar-start has-text-centered is-family-secondary is-uppercase"
+            style={styles.nav}
+          >
+            <Link className="navbar-item" to="/about">
+              OM OSS
+            </Link>
+            <Link className="navbar-item" to="/voices">
+              RÖSTER OM LOUD
+            </Link>
+            <Link className="navbar-item" to="/contact">
+              KONTAKT
+            </Link>
+          </div>
+          <div className="navbar-end has-text-centered">
+            <NavIcon
+              url={data.site.siteMetadata.instagram}
+              iconComponent={<FaInstagram />}
+            />
+            <NavIcon
+              url={data.site.siteMetadata.facebook}
+              iconComponent={<FaFacebook />}
+            />
+            <NavIcon
+              url={data.site.siteMetadata.youtube}
+              iconComponent={<FaYoutube />}
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;

@@ -4,7 +4,7 @@ https://www.loudprogramsweden.com/
 
 > Bootstrapped with Gatsby + Bulma site.
 
-![ss](https://i.imgur.com/Vz81GEl.png)
+![ss](https://photos.app.goo.gl/QNCuJSPqpmsKNk4u8)
 
 ## Features 🚀
 

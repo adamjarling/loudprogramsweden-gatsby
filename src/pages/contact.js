@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import HeroImageBg from "../components/HeroImageBg";
 import { graphql } from "gatsby";
 import Bounce from "react-reveal/Bounce";
+import MailChimp from "../components/MailChimp";
 
 const ContactPage = ({ data }) => {
   const { bgImage } = data;
@@ -18,18 +19,19 @@ const ContactPage = ({ data }) => {
 
         <section className="section">
           <div className="container content">
-            <div className="columns is-centered">
-              <div className="column is-9">
-                <Bounce>
-                  <div className="box">
+            <div className="box">
+              <div className="columns is-centered">
+                <div className="column is-9">
+                  <Bounce>
                     <p className="has-text-centered is-size-3 is-size-5-mobile">
                       För frågor och mer information, maila till: <br />
                       <a href="mailto:info@loudprogramsweden.com">
                         info@loudprogramsweden.com
                       </a>
                     </p>
-                  </div>
-                </Bounce>
+                    <MailChimp />
+                  </Bounce>
+                </div>
               </div>
             </div>
           </div>
