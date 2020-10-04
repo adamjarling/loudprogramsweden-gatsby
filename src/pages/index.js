@@ -38,6 +38,22 @@ const IndexPage = ({ data }) => {
 
         <section className="section">
           <div className="container">
+            <figure class="image is-16by9">
+              <iframe
+                className="has-ratio"
+                src="https://player.vimeo.com/video/464772568"
+                width="640"
+                height="360"
+                frameborder="0"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+              ></iframe>
+            </figure>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="container">
             <div className="box">
               <div className="content">
                 <p>
