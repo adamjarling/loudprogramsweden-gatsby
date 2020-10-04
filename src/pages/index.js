@@ -8,9 +8,11 @@ import Slide from "react-reveal/Slide";
 import Bounce from "react-reveal/Bounce";
 import HomeTitleAnimated from "../components/Home/TitleAnimated";
 import StatsUSA from "../components/Home/StatsUSA";
-import StatsSweden from "../components/Home/StatsSweden";
+import StatsVallingbyPark from "../components/StatsVallingbyPark";
+import StatsRoberts from "../components/StatsRoberts";
 import HeroSlider from "../components/Home/HeroSlider";
 import Img from "gatsby-image";
+import Values from "../components/Values";
 
 const IndexPage = ({ data }) => {
   const { josephine, sliders = [], introPdf } = data;
@@ -39,23 +41,18 @@ const IndexPage = ({ data }) => {
             <div className="box">
               <div className="content">
                 <p>
-                  LOUD Program är ett internationellt musikprogram som erbjuder
-                  högkvalitativ utbildning av instruktörer i världsklass till
-                  grundskoleelever.
+                  <strong>
+                    LOUD Sweden är ett internationellt musikprogram
+                  </strong>
+                  , som erbjuder gratis högkvalitativ musikundervisning till
+                  ungdomar från olika samhällsklasser, genom samarbete med
+                  skolor, kommuner och aktivitetshus.
                 </p>
                 <p>
-                  Eleverna skapar sina egna band, bandnamn och bandfoton. De lär
-                  sig sina favoritlåtar, samt skriver och spelar in sitt
-                  material. Under året får de flera chanser att uppträda med sin
-                  musik.
-                </p>
-
-                <p>
-                  Musikprogrammet finns i 19 skolor i USA, och sedan Januari
-                  2020 även i Sverige. Det första LOUD Program Sweden finns nu i
-                  den mångkulturella skolan{" "}
-                  <a href="https://bit.ly/3ebIcNV">Vällingby Park</a>,
-                  Pysslingens Skolor i Stockholm.
+                  LOUD Sweden är grundat av trummisen och låtskrivaren Josephine
+                  Forsman från bandet Sahara Hotnights, som också leder
+                  verksamheten som ytterst ansvarig, med sina med 20+ års
+                  erfarenhet av både svensk och internationell musikindustri.
                 </p>
               </div>
 
@@ -63,11 +60,12 @@ const IndexPage = ({ data }) => {
                 <div className="column is-four-fifths">
                   <Slide left>
                     <blockquote>
-                      Vällingby Park formar framtidens svenska musikgenier!
-                      Samarbetet mellan LOUD Program Sweden och skolan är ett
-                      exempel på ännu en kvalitetshöjning av den svenska
-                      musikundervisningen
-                      <cite>Staffan Åsberg / Rektor Vällingby Park</cite>
+                      Jag vill erbjuda elever samma hjälp som jag fick när jag
+                      var ung och började spela trummor. Det känns fantastiskt
+                      att svenska skolor och kommuner, delar tron på att enighet
+                      och samarbete mellan människor och kulturer är viktigt,
+                      och att det börjar i tidig skolålder.
+                      <cite>Josephine Forsman, grundare LOUD Sweden</cite>
                     </blockquote>
                   </Slide>
                 </div>
@@ -79,19 +77,22 @@ const IndexPage = ({ data }) => {
                 <div className="column is-three-fifths">
                   <div className="content">
                     <p>
-                      Musikdirektör för LOUD Program Sweden är Josephine
-                      Forsman, trummis och låtskrivare i Sahara Hotnights
+                      <strong>
+                        Efter lanseringen av LOUD Sweden Januari 2020
+                      </strong>
+                      , har programmets samtliga klasser nått full
+                      deltagarkapacitet med växande väntelistor, nära total
+                      jämställdhet mellan kön, och med deltagare från inte
+                      mindre än 20 olika kulturer.
                     </p>
                   </div>
                   <Slide left>
                     <blockquote>
-                      –Jag vill erbjuda elever samma hjälp som jag fick när jag
-                      var ung och började spela trummor, och jag insåg snabbt
-                      att programmet gjorde skillnad bland ungdomarna i Los
-                      Angeles. Det känns fantastiskt att svenska skolor delar
-                      tron på att enighet och samarbete mellan människor och
-                      kulturer är viktigt och att det börjar i skolorna.
-                      <cite>Josephine Forsman</cite>
+                      Vällingby Park formar framtidens svenska musikgenier!
+                      Samarbetet mellan LOUD Sweden och skolan är ett exempel på
+                      ännu en kvalitetshöjning av den svenska
+                      musikundervisningen
+                      <cite>Staffan Åsberg / f.d Rektor Vällingby Park</cite>
                     </blockquote>
                   </Slide>
                 </div>
@@ -113,14 +114,20 @@ const IndexPage = ({ data }) => {
                 </a>
               </div>
             </div>
+            <Values />
           </div>
         </section>
 
         <Bounce>
-          <StatsUSA />
+          <StatsVallingbyPark />
         </Bounce>
+
         <Bounce>
-          <StatsSweden />
+          <StatsRoberts />
+        </Bounce>
+
+        <Bounce>
+          <StatsUSA />
         </Bounce>
 
         <section className="section">

@@ -2,8 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import HeroImageBg from "../components/HeroImageBg";
 import pic1 from "../images/ScreenShot2019-09-01.jpg";
-import livePic from "../images/DSC09026.jpg";
-
+import Img from "gatsby-image";
 import { Link, graphql } from "gatsby";
 
 const AboutPage = ({ data }) => {
@@ -14,7 +13,7 @@ const AboutPage = ({ data }) => {
       <>
         <HeroImageBg
           title="Om Oss"
-          subtitle="LOUD Program Sweden"
+          subtitle="LOUD Sweden"
           bgImage={bgImage.childImageSharp.fluid}
         />
 
@@ -23,28 +22,40 @@ const AboutPage = ({ data }) => {
             <div className="box">
               <div className="content">
                 <p>
-                  LOUD Program startades i Santa Barbara av Mason Orfalea med
-                  hjälp av Audacious Foundation. Musikprogrammet finns i 19
-                  skolor runtom i USA och är i första hand avsett för ungdomar i
+                  <strong>
+                    LOUD Swedens värdegrunder bygger på Jämställdhet, Mångkultur
+                    och Kreativt lärande.
+                  </strong>{" "}
+                  Fokus ligger på att inspirera till, och stötta samarbeten
+                  mellan ungdomar, visa att var och ens unika kvalitéer spelar
+                  en stor roll som en del av helheten. Med musiken och
+                  bandkonstellationer som utgångspunkt, förbereder programmet
+                  deltagarna för alla typer av teamwork och relationer, längre
+                  fram i livet.
+                </p>
+
+                <p>
+                  LOUD Sweden som fristående program, samarbetar med LOUD USA
+                  som startades i Santa Barbara 2015. Med hjälp av Audacious
+                  Foundation, har LOUD USA vuxit till 19 olika skolor i Los
+                  Angeles, och är i första hand avsett för ungdomar i
                   socioekonomiskt utsatta områden.
                 </p>
+
                 <p>
-                  I Januari 2020 startades LOUD Program Sweden. Implementeringen
-                  leddes av initiativtagaren och programdirektören Josephine
-                  Forsman. LOUD Program Sweden finns i den mångkulturella skolan{" "}
-                  <a href="https://bit.ly/3ebIcNV">Vällingby Park</a>,
-                  Pysslingens Skolor i Stockholm.
+                  Instruktörerna är aktiva musiker, och den 32-veckor långa
+                  läroplanen är noga framtagen av musikexperter, musiklärare och
+                  musikbransch.
                 </p>
+
                 <p>
-                  <strong>Eleverna</strong> på LOUD Program skapar sitt eget
-                  band, bandnamn och bandfoton. Med bandet och musiken som
-                  utgångspunkt, förbereder musikprogrammet eleverna för alla
-                  typer av teamwork längre fram i livet.
-                </p>
-                <p>
-                  <strong>Instruktörerna</strong> är aktiva musiker och den
-                  32-veckor långa läroplanen är noga framtagen av musikexperter,
-                  musiklärare och musikbransch.
+                  <strong>
+                    LOUD Swedens tydliga koncept, internationella
+                    musikgemenskap, omfattande mentorskap, välutvecklade
+                    musikklasser med 32-veckors läroplan, och online-bibliotek,
+                    hjälper LOUD deltagarna att ta sina kreativa ambitioner från
+                    klassrummet och genom livet.
+                  </strong>
                 </p>
               </div>
               <div className="columns">
@@ -65,29 +76,64 @@ const AboutPage = ({ data }) => {
                 </div>
               </div>
             </div>
+
             <div className="box">
               <div className="content">
+                <div className="columns">
+                  <div className="column">
+                    <p>
+                      <strong>Deltagarna i LOUD skapar band</strong>, bandnamn,
+                      bandloggor, bandbiografier, bandriders - allt det som
+                      ingår i att vara ett band. Genom att utgå ifrån
+                      deltagarnas egna favoritlåtar, som en del av det Kreativa
+                      Lärandet, lär de sig även det grundläggande inom
+                      musikteori; rytm- och melodilära, noter och låtuppbyggnad.
+                      LOUD handlar om att ge deltagarna ägandeskap över sin egen
+                      kreativitet.
+                    </p>
+                  </div>
+                  <div className="column is-one-quarter">
+                    <Img fluid={data.golden.childImageSharp.fluid} />
+                  </div>
+                </div>
+
                 <p>
-                  Under skolåret, får LOUD-eleverna möjlighet, att visa upp sina
-                  färdigheter genom uppträdanden på, och utanför skolan.
+                  <strong>Deltagarna får träffa etablerade artister</strong>{" "}
+                  genom året, spela in i studio, skapa sina egna låtar och
+                  videos, samt värdefull insyn i marknadsföringen av ett band.
                 </p>
-                <p>
-                  <strong>LOUD Fest</strong> är den stora årliga festivalen där
-                  alla LOUD-band samlas och får spela på en stor scen med
-                  professionellt ljud och ljus.
-                </p>
+
+                <div className="columns">
+                  <div className="column">
+                    <p>
+                      <strong>Uppträdanden är en viktig del av LOUD</strong>,
+                      och deltagarna får flera chanser att visa upp sin musik.
+                      Varje år avslutas med att samtliga LOUD-band samlas och
+                      uppträder tillsammans, under LOUD fest. Här får samtliga
+                      LOUD-band chans att spela på en riktig scen, och träffa
+                      andra elever med samma intresse.
+                    </p>
+                  </div>
+                  <div className="column is-one-quarter">
+                    <Img fluid={data.livePic.childImageSharp.fluid} />
+                  </div>
+                </div>
               </div>
               <div className="columns">
                 <div className="column is-half">
-                  <figure className="image">
-                    <img src={livePic} alt="LOUD press photo" />
-                  </figure>
+                  <Img fluid={data.frida.childImageSharp.fluid} />
                 </div>
                 <div className="column is-half">
                   <blockquote>
-                    Att spela på LOUD Fest är det bästa med LOUD Program, jag
-                    älskar att uppträda på stora scener!
-                    <cite>Luis Garcia / Gitarrist LOUD Program</cite>
+                    Att få tillgång till ett instrument, och att hitta en väg in
+                    i musiken och samarbetet, öppnar så många dörrar, socialt
+                    och själsligt. Det är ett mycket bra sätt att bygga ett
+                    viktigt självförtroende. Det är fantastiskt att få följa
+                    LOUDs dedikerade arbete att erbjuda ungdomar denna
+                    möjlighet.
+                    <cite>
+                      Frida Hyvönen, Grammisprisad kompositör och textförfattare
+                    </cite>
                   </blockquote>
                 </div>
               </div>
@@ -106,6 +152,36 @@ export const pageQuery = graphql`
     bgImage: file(
       sourceInstanceName: { eq: "images" }
       relativePath: { eq: "DSC02092.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 2048, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    frida: file(
+      sourceInstanceName: { eq: "images" }
+      relativePath: { eq: "frida-hyvonen.jpeg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 2048, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    golden: file(
+      sourceInstanceName: { eq: "images" }
+      relativePath: { eq: "GoldenDiamonds2loggor.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 2048, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    livePic: file(
+      sourceInstanceName: { eq: "images" }
+      relativePath: { eq: "DSC09026.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 2048, quality: 100) {

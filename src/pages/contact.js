@@ -13,7 +13,7 @@ const ContactPage = ({ data }) => {
       <>
         <HeroImageBg
           title="KONTAKT"
-          subtitle="LOUD Program Sweden"
+          subtitle="LOUD Sweden"
           bgImage={bgImage.childImageSharp.fluid}
         />
 
@@ -23,10 +23,22 @@ const ContactPage = ({ data }) => {
               <div className="columns is-centered">
                 <div className="column is-9">
                   <Bounce>
+                    <ul className="is-size-5">
+                      <li>
+                        Är du som Allmän / Friskola, Kommun, Aktivitetshus,
+                        Kulturskola intresserad av att samarbeta med LOUD?
+                      </li>
+                      <li>
+                        Har du som Musiker, Mentor, Instruktör intresse av att
+                        jobba eller föreläsa hos LOUD?{" "}
+                      </li>
+                      <li>Vill du veta mer om vår verksamhet?</li>
+                    </ul>
+
                     <p className="has-text-centered is-size-3 is-size-5-mobile">
-                      För frågor och mer information, maila till: <br />
+                      Kontakta: <br />
                       <a href="mailto:info@loudprogramsweden.com">
-                        info@loudprogramsweden.com
+                        info@loudsweden.com
                       </a>
                     </p>
                     <MailChimp />

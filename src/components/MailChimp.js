@@ -42,7 +42,7 @@ const MailChimp = () => {
           <div className="field">
             <input
               type="submit"
-              value="Subscribe"
+              value="Registrera"
               name="subscribe"
               id="mc-embedded-subscribe"
               className="button is-primary"

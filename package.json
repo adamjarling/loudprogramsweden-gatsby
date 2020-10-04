@@ -23,7 +23,7 @@
     "react-animations": "^1.0.0",
     "react-dom": "^16.13.0",
     "react-helmet": "^6.0.0",
-    "react-icons": "^3.9.0",
+    "react-icons": "^3.11.0",
     "react-reveal": "^1.2.2",
     "styled-components": "^5.1.1"
   },

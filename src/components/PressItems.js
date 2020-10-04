@@ -5,10 +5,22 @@ import pysslingen from "../images/press/pysslingen.jpg";
 import unique from "../images/press/unique-chances.jpeg";
 import vallingby from "../images/press/vallingby-park.png";
 import press1 from "../images/press/press1.jpg";
+import press1Image from "../images/press1-image.png";
+import press2Image from "../images/press2-image.png";
 import jens from "../images/JensEriksson2020.jpg";
 import robertsF from "../images/press/robertsfors_farg.png";
+import { useStaticQuery, graphql } from "gatsby";
 
 const items = [
+  {
+    title:
+      "MUSIKPROJEKTET LOUD I ROBERTSFORS ÄR IGÅNG: “EN CHANS SOM JAG ANNARS INTE FÅTT”",
+    image: press1Image,
+  },
+  {
+    title: "KOMMER FRAMTIDENS HITMASKIN FRÅN ROBERTSFORS?",
+    image: press2Image,
+  },
   {
     title:
       "SAHARA HOTNIGTHS-TRUMMISEN STARTAR MUSIKSKOLA I ROBERTSFORS - P4 VÄSTERBOTTEN",
@@ -49,13 +61,40 @@ const items = [
 ];
 
 const PressItems = () => {
+  const data = useStaticQuery(graphql`
+    query PressItemsQuery {
+      press1: file(
+        sourceInstanceName: { eq: "pdf" }
+        relativePath: { eq: "Press1.pdf" }
+      ) {
+        id
+        publicURL
+      }
+      press2: file(
+        sourceInstanceName: { eq: "pdf" }
+        relativePath: { eq: "Press2.pdf" }
+      ) {
+        id
+        publicURL
+      }
+    }
+  `);
+
   return (
     <div className="columns is-multiline">
-      {items.map((item) => (
-        <div className="column is-one-third" key={item.title}>
-          <PressItem {...item} />
-        </div>
-      ))}
+      {items.map((item) => {
+        if (item.image === press1Image) {
+          item.url = data.press1.publicURL;
+        } else if (item.image === press2Image) {
+          item.url = data.press2.publicURL;
+        }
+
+        return (
+          <div className="column is-one-third" key={item.title}>
+            <PressItem {...item} />
+          </div>
+        );
+      })}
     </div>
   );
 };

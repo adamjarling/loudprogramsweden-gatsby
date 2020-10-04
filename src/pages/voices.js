@@ -19,12 +19,13 @@ const VoicesPage = ({ data }) => {
             <Fade>
               <article className="tile notification is-white">
                 <blockquote>
-                  Att få tillgång till instrument, och att hitta in i
-                  musikalitet och samspel, öppnar upp så många ytterligare
-                  dörrar, socialt och själsligen. Självkänslan stärks, inte
-                  minst. Det är fantastiskt att följa LOUD's hängivna arbete för
-                  denna möjlighet.
-                  <cite>Frida Hyvönen Artist/Sångerska/Låtskrivare </cite>
+                  In these times of isolation and frustration, nothing brings
+                  people more together than Music. Giving a kid the option to
+                  learn an instrument instead of filling all the extra hours
+                  with the latest social-media app or first-person shooter video
+                  game is probably one of the easiest decisions any school or
+                  community could make.
+                  <cite>Ryan Roxie, Guitarist in Alice Cooper</cite>
                 </blockquote>
               </article>
             </Fade>

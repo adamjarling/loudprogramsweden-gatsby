@@ -10,13 +10,13 @@ const Footer = () => (
         style={{ width: "10em", height: "auto" }}
       />
       <p>
-        LOUD Program Sweden -{" "}
+        LOUD Sweden -{" "}
         <a
           href="http://www.loudprogram.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          LOUD Program USA
+          LOUD USA
         </a>
       </p>
       <p>&copy; 2020 - All rights reserved</p>

@@ -8,25 +8,20 @@ const StatsUSA = () => {
           <h2 className="title">LOUD Program US </h2>
           <h3 className="subtitle">2019/2020</h3>
           <ul>
-            <li>
-              LOUD finns i 19 skolor i Los Angeles, Santa Barbara och New
-              Jersey.
-            </li>{" "}
-            <li>
-              Ungefär 92% elever kvalificerar sig till gratis lunchprogram.
-            </li>
+            <li>Antal Skolor: 19 skolor i Los Angeles</li>{" "}
+            <li>Finansiering: Audacious Foundation</li>
           </ul>
           <div className="level">
             <div className="level-item has-text-centered">
               <div>
                 <p className="heading">Antal LOUD-elever</p>
-                <p className="title">290</p>
+                <p className="title">450</p>
               </div>
             </div>
             <div className="level-item has-text-centered">
               <div>
                 <p className="heading">Årskurs</p>
-                <p className="title">6 - 9</p>
+                <p className="title">6 - 12</p>
               </div>
             </div>
             <div className="level-item has-text-centered">
@@ -43,16 +38,6 @@ const StatsUSA = () => {
                   mer om musik efter LOUD Program
                 </p>
                 <p className="title">90.9%</p>
-              </div>
-            </div>
-            <div className="level-item has-text-centered">
-              <div>
-                <p className="heading">
-                  Procentantal elever som säger sig
-                  <br />
-                  vilja fortsätta med LOUD Program
-                </p>
-                <p className="title">94.5%</p>
               </div>
             </div>
           </div>
