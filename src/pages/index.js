@@ -126,7 +126,7 @@ const IndexPage = ({ data }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  HÄLSNING FRÅN PROGRAMDIREKTÖR JOSEPHINE FORSMAN
+                  HÄLSNING FRÅN JOSEPHINE FORSMAN
                 </a>
               </div>
             </div>
@@ -161,9 +161,7 @@ const IndexPage = ({ data }) => {
               <h3 className="title is-size-2 is-size-3-mobile">KONTAKT</h3>
               <p className="is-size-3 is-size-6-mobile">
                 För frågor och mer information, maila till: <br />
-                <a href="mailto:info@loudprogramsweden.com">
-                  info@loudprogramsweden.com
-                </a>
+                <a href="mailto:info@loudsweden.com">info@loudsweden.com</a>
               </p>
             </div>
           </div>
@@ -179,7 +177,7 @@ export const pageQuery = graphql`
   query IndexPageQuery {
     introPdf: file(
       sourceInstanceName: { eq: "pdf" }
-      relativePath: { eq: "loud-introduction.pdf" }
+      relativePath: { eq: "LOUD-Introduktion.pdf" }
     ) {
       id
       publicURL

@@ -37,7 +37,7 @@ const ContactPage = ({ data }) => {
 
                     <p className="has-text-centered is-size-3 is-size-5-mobile">
                       Kontakta: <br />
-                      <a href="mailto:info@loudprogramsweden.com">
+                      <a href="mailto:info@loudsweden.com">
                         info@loudsweden.com
                       </a>
                     </p>
