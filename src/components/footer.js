@@ -6,7 +6,7 @@ const Footer = () => (
     <div className="content has-text-centered">
       <img
         src={loudLogo}
-        alt="Loud Music Program Sweden"
+        alt="Loud Sweden"
         style={{ width: "10em", height: "auto" }}
       />
       <p>

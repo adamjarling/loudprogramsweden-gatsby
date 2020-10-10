@@ -1,6 +1,6 @@
-# LOUD Program Sweden
+# LOUD Sweden
 
-https://www.loudprogramsweden.com/
+https://www.loudsweden.com/
 
 > Bootstrapped with Gatsby + Bulma site.
 

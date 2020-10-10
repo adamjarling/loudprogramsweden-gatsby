@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: "LOUD Program Sweden",
+    title: "LOUD Sweden",
     author: "Adam J. Arling",
     imageUrl: "src/images/LOUDSwe2-inverted.png",
     description: "Stärker Gemenskapen Med Musikutbildning i Världsklass.",
-    keywords: `Music Education, Sweden, LOUD Program`,
+    keywords: `Music Education, Sweden, LOUD`,
     instagram: "https://www.instagram.com/loudprogramsweden/",
     facebook: "https://www.facebook.com/loudprogramsweden/",
     youtube: "https://www.youtube.com/channel/UCGloIGY2ov_2XOzkkeoOTXA",
-    siteUrl: `https://loudprogramsweden.com`,
+    siteUrl: `https://loudsweden.com`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -38,8 +38,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "LOUD Program Sweden",
-        short_name: "LOUD Program Sweden",
+        name: "LOUD Sweden",
+        short_name: "LOUD Sweden",
         start_url: "/",
         background_color: "#1c212e",
         theme_color: "#14b7ad",

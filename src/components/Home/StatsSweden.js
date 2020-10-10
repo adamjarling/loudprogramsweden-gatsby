@@ -5,7 +5,7 @@ const StatsSweden = () => {
     <section className="hero is-light">
       <div className="hero-body">
         <div className="container content">
-          <h2 className="title">LOUD Program Sweden</h2>
+          <h2 className="title">LOUD Sweden</h2>
           <h3 className="subtitle">2020</h3>
 
           <div className="level">

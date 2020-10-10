@@ -5,7 +5,7 @@ const StatsUSA = () => {
     <section className="hero is-dark">
       <div className="hero-body">
         <div className="container content">
-          <h2 className="title">LOUD Program US </h2>
+          <h2 className="title">LOUD US </h2>
           <h3 className="subtitle">2019/2020</h3>
           <ul>
             <li>Antal Skolor: 19 skolor i Los Angeles</li>{" "}
